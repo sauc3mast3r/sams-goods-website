@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const stripe = require('stripe')('***REMOVED***'); // replace with your Stripe secret key
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // ✅ safer
 const cors = require('cors');
 
 app.use(cors());
