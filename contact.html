@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Sam's Goods, LLC</title>
+    <meta name="description" content="Contact Sam's Goods for custom quotes, consultations, and general inquiries. Email, Instagram, and contact form available.">
+    <link rel="icon" type="image/x-icon" href="images/SG ICON.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <img src="images/SG ICON.png" alt="Sam's Goods Logo" class="logo">
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="store.html" class="nav-link">Store</a></li>
+                <li><a href="booking.html" class="nav-link">Book Now</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-content">
+            <h1>Get in Touch</h1>
+            <p>Ready to start your next creative project? Let's talk.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="grid grid-2">
+            <!-- Contact Form -->
+            <div class="card">
+                <h2>Send us a Message</h2>
+                <p>Have a question, need a custom quote, or want to discuss your project? Fill out the form below and we'll get back to you within 24 hours.</p>
+                
+                <form id="contact-form" action="https://formspree.io/f/mvgrvveg" method="POST">
+                    <input type="hidden" name="_subject" value="Contact Form Submission - Sam's Goods">
+                    
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name *</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <select id="subject" name="subject" class="form-select">
+                            <option value="">Select a topic...</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Custom Quote Request">Custom Quote Request</option>
+                            <option value="Service Question">Service Question</option>
+                            <option value="Collaboration">Collaboration Opportunity</option>
+                            <option value="Technical Support">Technical Support</option>
+                            <option value="Feedback">Feedback</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Tell us about your project, question, or how we can help..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="card">
+                <h2>Contact Information</h2>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📧 Email</h3>
+                        <p><a href="mailto:Samosupreme@samsgoods.company">Samosupreme@samsgoods.company</a></p>
+                        <p>Primary contact for all inquiries, quotes, and bookings</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>📱 Instagram</h3>
+                        <p><a href="https://instagram.com/samosupreme2025" target="_blank">@samosupreme2025</a></p>
+                        <p>Follow for updates, behind-the-scenes content, and direct messaging</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>📍 Location</h3>
+                        <p><strong>Sacramento, California</strong></p>
+                        <p>Serving local clients and remote projects nationwide</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>⏰ Response Time</h3>
+                        <p><strong>Within 24 hours</strong></p>
+                        <p>We typically respond to all inquiries within one business day</p>
+                    </div>
+                </div>
+
+                <h3>💼 Business Hours</h3>
+                <ul>
+                    <li><strong>Monday - Friday:</strong> 10:00 AM - 6:00 PM PST</li>
+                    <li><strong>Saturday:</strong> 12:00 PM - 4:00 PM PST</li>
+                    <li><strong>Sunday:</strong> By appointment only</li>
+                </ul>
+
+                <h3>💳 Payment Methods</h3>
+                <ul>
+                    <li>CashApp</li>
+                    <li>Zelle</li>
+                    <li>PayPal</li>
+                    <li>Cash (local clients)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="grid grid-2">
+            <div class="card">
+                <h3>How do I get a custom quote?</h3>
+                <p>Use our <a href="booking.html">booking form</a> or send us an email with your project details. We'll provide a detailed quote within 24 hours.</p>
+                
+                <h3>What's your typical turnaround time?</h3>
+                <p>Most projects are completed within 1-2 weeks. Rush orders are available for an additional fee. Timeline depends on project complexity and current workload.</p>
+                
+                <h3>Do you work with clients outside Sacramento?</h3>
+                <p>Yes! We work with clients nationwide. Many services can be completed remotely, and we can ship physical products anywhere in the US.</p>
+            </div>
+            
+            <div class="card">
+                <h3>What's included in the deposit?</h3>
+                <p>A 50% deposit is required to begin work. This secures your spot in our schedule and covers initial project setup. The deposit is non-refundable if canceled within 48 hours of the scheduled start.</p>
+                
+                <h3>How many revisions are included?</h3>
+                <p>All services include up to 2 rounds of revisions. Additional revisions are billed at $25/hour to ensure fair pricing for all clients.</p>
+                
+                <h3>Can I see examples of your work?</h3>
+                <p>Follow us on <a href="https://instagram.com/samosupreme2025" target="_blank">Instagram @samosupreme2025</a> for our latest work, or request a portfolio during your consultation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Service Areas</h2>
+        </div>
+        <div class="grid grid-4">
+            <div class="card text-center">
+                <h3>🎨 Custom Apparel</h3>
+                <p>T-shirts, hoodies, stickers, and merchandise for individuals and businesses</p>
+                <a href="services.html#apparel" class="btn btn-primary">Learn More</a>
+            </div>
+            
+            <div class="card text-center">
+                <h3>🎧 Music Production</h3>
+                <p>Beats, recording, mixing, mastering, and full song production</p>
+                <a href="services.html#music" class="btn btn-primary">Learn More</a>
+            </div>
+            
+            <div class="card text-center">
+                <h3>🎥 Video Production</h3>
+                <p>Music videos, promotional content, and visual storytelling</p>
+                <a href="services.html#video" class="btn btn-primary">Learn More</a>
+            </div>
+            
+            <div class="card text-center">
+                <h3>💻 Design & Branding</h3>
+                <p>Logos, album covers, branding packages, and visual identity</p>
+                <a href="services.html#branding" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section">
+        <div class="text-center">
+            <h2>Ready to Get Started?</h2>
+            <p>Whether you have a specific project in mind or just want to explore possibilities, we're here to help bring your creative vision to life.</p>
+            <div class="mt-4">
+                <a href="booking.html" class="btn btn-primary">Book a Service</a>
+                <a href="services.html" class="btn btn-secondary">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="services.html" class="footer-link">Services</a>
+                <a href="store.html" class="footer-link">Store</a>
+                <a href="booking.html" class="footer-link">Booking</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="terms.html" class="footer-link">Terms</a>
+            </div>
+            <div class="social-links">
+                <a href="https://instagram.com/samosupreme2025" class="social-link" target="_blank">📷 Instagram</a>
+                <a href="mailto:Samosupreme@samsgoods.company" class="social-link">✉️ Email</a>
+            </div>
+            <p>&copy; 2025 Sam's Goods, LLC. All rights reserved. | Sacramento, CA</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

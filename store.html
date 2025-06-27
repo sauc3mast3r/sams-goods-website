@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store - Sam's Goods, LLC</title>
+    <meta name="description" content="Shop custom apparel, stickers, and exclusive beats from Sam's Goods. High-quality merchandise and music production available now.">
+    <link rel="icon" type="image/x-icon" href="images/SG ICON.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Size dropdown styling */
+        .size-selector {
+            margin: 10px 0;
+        }
+        
+        .size-selector label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .size-dropdown {
+            width: 100%;
+            padding: 8px 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            background-color: #fff;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+        
+        .size-dropdown:focus {
+            outline: none;
+            border-color:rgb(220, 216, 211);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+        }
+        
+        .size-dropdown:hover {
+            border-color:rgb(128, 5, 17);
+        }
+        
+        /* Enhanced buy button */
+        .buy-button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 12px;
+            background-color:rgb(255, 7, 7);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        .buy-button:hover {
+            background-color:rgb(124, 3, 12);
+            transform: translateY(-2px);
+        }
+        
+        .buy-button:active {
+            transform: translateY(0);
+        }
+        
+        .buy-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* Product card enhancements */
+        .product-info {
+            padding: 15px;
+        }
+        
+        .product-title {
+            margin-bottom: 8px;
+        }
+        
+        .product-price {
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color:rgb(128, 8, 8);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <img src="images/SG ICON.png" alt="Sam's Goods Logo" class="logo">
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="store.html" class="nav-link">Store</a></li>
+                <li><a href="booking.html" class="nav-link">Book Now</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-content">
+            <h1>Sam's Goods Store</h1>
+            <p>Premium apparel, exclusive beats, and custom merchandise</p>
+        </div>
+    </section>
+
+    <!-- Store Navigation -->
+    <section class="section">
+        <div class="text-center">
+            <div class="store-nav">
+                <a href="#apparel" class="btn btn-secondary">Apparel</a>
+                <a href="#stickers" class="btn btn-secondary">Stickers</a>
+                <a href="#mugs" class="btn btn-secondary">Mugs</a>
+                <a href="#beats" class="btn btn-secondary">Beats</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apparel Section -->
+    <section class="section" id="apparel">
+        <div class="section-title">
+            <h2>👕 Apparel</h2>
+            <p>Premium custom designs on high-quality blanks</p>
+        </div>
+        <div class="apparel-grid">
+            <div class="product-card">
+                <img src="assets/Product_Catalog/ENONO Classic/ENONO Classic_Tee.png" alt="ENONO Classic Tee" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">ENONO Classic Tee</h3>
+                    <p class="product-price">$22.99</p>
+                    <div class="size-selector">
+                        <label for="size-enono-classic-tee">Size:</label>
+                        <select id="size-enono-classic-tee" class="size-dropdown" data-product="enono-classic-tee">
+                            <option value="">Select Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">X-Large</option>
+                            <option value="XXL">XX-Large</option>
+                        </select>
+                    </div>
+                    <button class="buy-button" data-stripe-url="https://buy.stripe.com/7sY6oHgF90yz2GW1yh8og06" data-product="enono-classic-tee" disabled>Buy Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/ENONO Classic/ENONO Classic_Hoodie.png" alt="ENONO Classic Hoodie" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">ENONO Classic Hoodie</h3>
+                    <p class="product-price">$39.99</p>
+                    <div class="size-selector">
+                        <label for="size-enono-classic-hoodie">Size:</label>
+                        <select id="size-enono-classic-hoodie" class="size-dropdown" data-product="enono-classic-hoodie">
+                            <option value="">Select Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">X-Large</option>
+                            <option value="XXL">XX-Large</option>
+                        </select>
+                    </div>
+                    <button class="buy-button" data-stripe-url="https://buy.stripe.com/fZu8wPagL4OP95ka4N8og0F" data-product="enono-classic-hoodie" disabled>Buy Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/Commander of Confidence/Commander of Confidence_Tee/FRONT.png" alt="Commander of Confidence Tee" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Commander of Confidence Tee</h3>
+                    <p class="product-price">$24.99</p>
+                    <div class="size-selector">
+                        <label for="size-commander-confidence-tee">Size:</label>
+                        <select id="size-commander-confidence-tee" class="size-dropdown" data-product="commander-confidence-tee">
+                            <option value="">Select Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">X-Large</option>
+                            <option value="XXL">XX-Large</option>
+                        </select>
+                    </div>
+                    <button class="buy-button" data-stripe-url="https://buy.stripe.com/9B69AT88D5STbdsb8R8og04" data-product="commander-confidence-tee" disabled>Buy Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/ENONO Flip/ENONO Flip_Hoodie.png" alt="ENONO Flip Hoodie" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">ENONO Flip Hoodie</h3>
+                    <p class="product-price">$39.99</p>
+                    <div class="size-selector">
+                        <label for="size-enono-flip-hoodie">Size:</label>
+                        <select id="size-enono-flip-hoodie" class="size-dropdown" data-product="enono-flip-hoodie">
+                            <option value="">Select Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">X-Large</option>
+                            <option value="XXL">XX-Large</option>
+                        </select>
+                    </div>
+                    <button class="buy-button" data-stripe-url="https://buy.stripe.com/fZu9ATcoT955dlA90J8og0E" data-product="enono-flip-hoodie" disabled>Buy Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/ENONO Wave/ENONO Wave_Tee.png" alt="ENONO Wave Tee" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">ENONO Wave Tee</h3>
+                    <p class="product-price">$22.99</p>
+                    <div class="size-selector">
+                        <label for="size-enono-wave-tee">Size:</label>
+                        <select id="size-enono-wave-tee" class="size-dropdown" data-product="enono-wave-tee">
+                            <option value="">Select Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">X-Large</option>
+                            <option value="XXL">XX-Large</option>
+                        </select>
+                    </div>
+                    <button class="buy-button" data-stripe-url="https://buy.stripe.com/fZu5kD1KfchhepE3Gp8og0G" data-product="enono-wave-tee" disabled>Buy Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/ENONO Wave/ENONO Wave_Hoodie.png" alt="ENONO Wave Hoodie" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">ENONO Wave Hoodie</h3>
+                    <p class="product-price">$39.99</p>
+                    <div class="size-selector">
+                        <label for="size-enono-wave-hoodie">Size:</label>
+                        <select id="size-enono-wave-hoodie" class="size-dropdown" data-product="enono-wave-hoodie">
+                            <option value="">Select Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">X-Large</option>
+                            <option value="XXL">XX-Large</option>
+                        </select>
+                    </div>
+                    <button class="buy-button" data-stripe-url="https://buy.stripe.com/bJe9AT2Ojftt4P4b8R8og0H" data-product="enono-wave-hoodie" disabled>Buy Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/Fuck Yeah, I'm Not Here to Adult Today!/Fuck Yeah, I'm Not Here to Adult Today!_WomensTee.png" alt="Not Here to Adult Today Tee" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Not Here to Adult Today Tee</h3>
+                    <p class="product-price">$22.99</p>
+                    <div class="size-selector">
+                        <label for="size-adult-today-tee">Size:</label>
+                        <select id="size-adult-today-tee" class="size-dropdown" data-product="adult-today-tee">
+                            <option value="">Select Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">X-Large</option>
+                            <option value="XXL">XX-Large</option>
+                        </select>
+                    </div>
+                    <button class="buy-button" data-stripe-url="https://buy.stripe.com/fZu5kD4Wr4OPchwccV8og0I" data-product="adult-today-tee" disabled>Buy Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/ENO NO Limited Edition Box Logo/ENO NO Limited Edition Box Logo Tee.png" alt="ENO NO Limited Edition Tee" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">ENO NO Limited Edition Tee</h3>
+                    <p class="product-price">$24.99</p>
+                    <div class="size-selector">
+                        <label for="size-eno-limited-tee">Size:</label>
+                        <select id="size-eno-limited-tee" class="size-dropdown" data-product="eno-limited-tee">
+                            <option value="">Select Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">X-Large</option>
+                            <option value="XXL">XX-Large</option>
+                        </select>
+                    </div>
+                    <button class="buy-button" data-stripe-url="https://buy.stripe.com/aFaeVd1Kf3KLepEa4N8og0M" data-product="eno-limited-tee" disabled>Buy Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/Let's Get Drunk/Let's Get Drunk_Tee.png" alt="Let's Get Drunk" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Let's Get Drunk</h3>
+                    <p class="product-price">$22.99</p>
+                    <div class="size-selector">
+                        <label for="size-get-drunk-tee">Size:</label>
+                        <select id="size-get-drunk-tee" class="size-dropdown" data-product="get-drunk-tee">
+                            <option value="">Select Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">X-Large</option>
+                            <option value="XXL">XX-Large</option>
+                        </select>
+                    </div>
+                    <button class="buy-button" data-stripe-url="https://buy.stripe.com/fZufZhgF9a99chwdgZ8og0K" data-product="get-drunk-tee" disabled>Buy Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/MFJ Brass Knuckles/MFJ Brass Knuckles_Tee.png" alt="MFJ Brass Knuckles" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">MFJ Brass Knuckles</h3>
+                    <p class="product-price">$22.99</p>
+                    <div class="size-selector">
+                        <label for="size-mfj-brass-tee">Size:</label>
+                        <select id="size-mfj-brass-tee" class="size-dropdown" data-product="mfj-brass-tee">
+                            <option value="">Select Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">X-Large</option>
+                            <option value="XXL">XX-Large</option>
+                        </select>
+                    </div>
+                    <button class="buy-button" data-stripe-url="https://buy.stripe.com/fZufZhgF93KLbdsa4N8og05" data-product="mfj-brass-tee" disabled>Buy Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/Trumpasaurus Rex/BACK.png" alt="Trumpasaurus Rex" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Trumpasaurus Rex</h3>
+                    <p class="product-price">$22.99</p>
+                    <div class="size-selector">
+                        <label for="size-trumpasaurus-tee">Size:</label>
+                        <select id="size-trumpasaurus-tee" class="size-dropdown" data-product="trumpasaurus-tee">
+                            <option value="">Select Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">X-Large</option>
+                            <option value="XXL">XX-Large</option>
+                        </select>
+                    </div>
+                    <button class="buy-button" data-stripe-url="https://buy.stripe.com/5kQ9AT3Sndllbdsgtb8og0J" data-product="trumpasaurus-tee" disabled>Buy Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/ENONO Pixel/ENONO Pixel_Hoodie.png" alt="ENONO Pixel Hoodie" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">ENONO Pixel Hoodie</h3>
+                    <p class="product-price">$39.99</p>
+                    <div class="size-selector">
+                        <label for="size-enono-pixel-hoodie">Size:</label>
+                        <select id="size-enono-pixel-hoodie" class="size-dropdown" data-product="enono-pixel-hoodie">
+                            <option value="">Select Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">X-Large</option>
+                            <option value="XXL">XX-Large</option>
+                        </select>
+                    </div>
+                    <button class="buy-button" data-stripe-url="https://buy.stripe.com/dRm4gz88Depp6Xcb8R8og0L" data-product="enono-pixel-hoodie" disabled>Buy Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/Trump Original Gangster Mugshot/Trump_Original_Gangster_Mugshot_Hoodie.png" alt="Trump Original Gangster Mugshot" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Trump Original Gangster Mugshot</h3>
+                    <p class="product-price">$44.99</p>
+                    <div class="size-selector">
+                        <label for="size-trump-gangster-hoodie">Size:</label>
+                        <select id="size-trump-gangster-hoodie" class="size-dropdown" data-product="trump-gangster-hoodie">
+                            <option value="">Select Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">X-Large</option>
+                            <option value="XXL">XX-Large</option>
+                        </select>
+                    </div>
+                    <button class="buy-button" data-stripe-url="https://buy.stripe.com/5kQbJ1coTa992GW3Gp8og0N" data-product="trump-gangster-hoodie" disabled>Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stickers Section -->
+    <section class="section" id="stickers">
+        <div class="section-title">
+            <h2>🏷️ Stickers</h2>
+            <p>Weatherproof vinyl stickers for laptops, cars, and more</p>
+        </div>
+        <div class="grid grid-4">
+            <div class="product-card">
+                <img src="assets/Product_Catalog/ENONO Classic/ENONO Classic_Sticker.png" alt="ENONO Classic Sticker" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">ENONO Classic Sticker</h3>
+                    <p class="product-price">$3.50</p>
+                    <a href="https://buy.stripe.com/8x2bJ1fB5ftt95kel38og0D" target="_blank" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/ENONO Flip/ENONO Flip_Sticker.png" alt="ENONO Flip Sticker" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">ENONO Flip Sticker</h3>
+                    <p class="product-price">$3.50</p>
+                    <a href="https://buy.stripe.com/3cI5kD88Da99dlAa4N8og0C" target="_blank" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/ENONO Pixel/ENONO Pixel_Sticker.png" alt="ENONO Pixel Sticker" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">ENONO Pixel Sticker</h3>
+                    <p class="product-price">$3.50</p>
+                    <a href="https://buy.stripe.com/fZueVd88D1CD0yO6SB8og0B" target="_blank" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/Trump Rap Game Boss/Trump_Rap_Game_Boss_Sticker.png" alt="Trump Rap Game Boss Sticker" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Trump Rap Game Boss Sticker</h3>
+                    <p class="product-price">$5.00</p>
+                    <a href="https://buy.stripe.com/cNiaEX74z9550yO0ud8og0A" target="_blank" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mugs Section -->
+    <section class="section" id="mugs">
+        <div class="section-title">
+            <h2>☕ Mugs</h2>
+            <p>Start your day with style</p>
+        </div>
+        <div class="grid grid-4">
+            <div class="product-card">
+                <img src="assets/Product_Catalog/ENONO Classic/ENONO Classic_Mug.png" alt="ENONO Classic Mug" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">ENONO Classic Mug</h3>
+                    <p class="product-price">$12.99</p>
+                    <a href="https://buy.stripe.com/dRm9ATcoTftt81gfp78og0w" target="_blank" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/Let's Get Drunk/Let's Get Drunk_Mug.png" alt="Let's Get Drunk" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Let's Get Drunk</h3>
+                    <p class="product-price">$12.99</p>
+                    <a href="https://buy.stripe.com/6oUbJ1gF9gxx0yO2Cl8og0x" target="_blank" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/ENONO Flip/ENONO Flip_Mug.png" alt="ENONO Flip Mug" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">ENONO Flip Mug</h3>
+                    <p class="product-price">$12.99</p>
+                    <a href="https://buy.stripe.com/3cI14n2Ojdll6Xcb8R8og0y" target="_blank" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/ENONO Pixel/ENONO Pixel_Mug.png" alt="ENONO Pixel Mug" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">ENONO Pixel Mug</h3>
+                    <p class="product-price">$12.99</p>
+                    <a href="https://buy.stripe.com/9B63cv74z95581g0ud8og0z" target="_blank" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="assets/Product_Catalog/Commander of Confidence/Commander of Confidence_Mug.png" alt="Commander of Confidence Mug" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Commander of Confidence Mug</h3>
+                    <p class="product-price">$14.99</p>
+                    <a href="https://buy.stripe.com/8x2bJ14Wra99epE0ud8og0v" target="_blank" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beats Section -->
+    <section class="section" id="beats">
+        <div class="section-title">
+            <h2>🎵 Exclusive Beats</h2>
+            <p>Professional beats for your next hit</p>
+        </div>
+        <div class="license-info">
+            <h4>🔑 License Options</h4>
+            <p><strong>Lease (MP3/WAV):</strong></p>
+            <ul>
+                <li>Non-exclusive use</li>
+                <li>Up to 100,000 streams</li>
+                <li>1-2 Music videos</li>
+                <li>Credit: Prod. by Sam Supreme</li>
+                <li>No resale, no TV/film sync use</li>
+            </ul>
+            <p><strong>Exclusive (WAV + Stems):</strong></p>
+            <ul>
+                <li>Unlimited use, full rights</li>
+                <li>Beat removed from catalog</li>
+                <li>TV/Film sync allowed</li>
+                <li>Ideal for serious artists, albums, or label submissions</li>
+            </ul>
+        </div>
+        <div class="grid grid-3">
+            <div class="card">
+                <h3>Wide Open Sky</h3>
+                <p><strong>BPM:</strong> 73 | <strong>Genre:</strong> Chill/R&B</p>
+                <div class="custom-audio-player" data-beat-name="Wide Open Sky">
+                    <img src="audio/Beats_for_sale/Wide Open Sky - 73 BPM.png" alt="Wide Open Sky Album Art" class="album-art">
+                    <audio preload="metadata" data-beat-name="Wide Open Sky">
+                        <source src="audio/Beats_for_sale/Wide Open Sky - 73 BPM.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <button class="play-pause-btn">Play▶️</button>
+                    <span class="time-display">0:00 / 0:00</span>
+                </div>
+                <div class="beat-pricing">
+                    <p><strong>MP3 Lease:</strong> $19.99 | <strong>WAV Lease:</strong> $39.99 | <strong>Exclusive:</strong> $249</p>
+                    <a href="https://buy.stripe.com/eVqbJ160veppdlA4Kt8og00" target="_blank" class="btn btn-primary">MP3 Lease</a>
+                    <a href="https://buy.stripe.com/3cIdR90Gb811dlA3Gp8og01" target="_blank" class="btn btn-primary">WAV Lease</a>
+                    <a href="https://buy.stripe.com/00weVd74z811gxM2Cl8og02" target="_blank" class="btn btn-secondary">Buy Exclusive</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Voltage Echo</h3>
+                <p><strong>BPM:</strong> 116 | <strong>Genre:</strong> Electronic/Trap</p>
+                <div class="custom-audio-player" data-beat-name="Voltage Echo">
+                    <img src="audio/Beats_for_sale/Voltage Echo - 116 BPM.png" alt="Voltage Echo Album Art" class="album-art">
+                    <audio preload="metadata" data-beat-name="Voltage Echo">
+                        <source src="audio/Beats_for_sale/Voltage Echo - 116 BPM.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <button class="play-pause-btn">Play▶️</button>
+                    <span class="time-display">0:00 / 0:00</span>
+                </div>
+                <div class="beat-pricing">
+                    <p><strong>MP3 Lease:</strong> $24.99 | <strong>WAV Lease:</strong> $44.99 | <strong>Exclusive:</strong> $299</p>
+                    <a href="https://buy.stripe.com/eVq9AT0Gbgxx5T8gtb8og08" target="_blank" class="btn btn-primary">MP3 Lease</a>
+                    <a href="https://buy.stripe.com/6oUaEXbkP4OP81g90J8og07" target="_blank" class="btn btn-primary">WAV Lease</a>
+                    <a href="https://buy.stripe.com/28E14nex1eppgxMel38og09" target="_blank" class="btn btn-secondary">Buy Exclusive</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Trap Relic</h3>
+                <p><strong>BPM:</strong> 97 | <strong>Genre:</strong> Trap</p>
+                <div class="custom-audio-player" data-beat-name="Trap Relic">
+                    <img src="audio/Beats_for_sale/Trap Relic - 97 BPM.png" alt="Trap Relic Album Art" class="album-art">
+                    <audio preload="metadata" data-beat-name="Trap Relic">
+                        <source src="audio/Beats_for_sale/Trap Relic - 97 BPM.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <button class="play-pause-btn">Play▶️</button>
+                    <span class="time-display">0:00 / 0:00</span>
+                </div>
+                <div class="beat-pricing">
+                    <p><strong>MP3 Lease:</strong> $24.99 | <strong>WAV Lease:</strong> $44.99 | <strong>Exclusive:</strong> $249</p>
+                    <a href="https://buy.stripe.com/dRm6oHagLdlldlA6SB8og0a" target="_blank" class="btn btn-primary">MP3 Lease</a>
+                    <a href="https://buy.stripe.com/dRm6oHcoTdllepE4Kt8og0b" target="_blank" class="btn btn-primary">WAV Lease</a>
+                    <a href="https://buy.stripe.com/6oU00j2Oj6WXgxM1yh8og0c" target="_blank" class="btn btn-secondary">Buy Exclusive</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Solar Ledge</h3>
+                <p><strong>BPM:</strong> 92 | <strong>Genre:</strong> Hip-Hop/Lo-Fi</p>
+                <div class="custom-audio-player" data-beat-name="Solar Ledge">
+                    <img src="audio/Beats_for_sale/Solar Ledge - 92 BPM.png" alt="Solar Ledge Album Art" class="album-art">
+                    <audio preload="metadata" data-beat-name="Solar Ledge">
+                        <source src="audio/Beats_for_sale/Solar Ledge - 92 BPM.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <button class="play-pause-btn">Play▶️</button>
+                    <span class="time-display">0:00 / 0:00</span>
+                </div>
+                <div class="beat-pricing">
+                    <p><strong>MP3 Lease:</strong> $19.99 | <strong>WAV Lease:</strong> $39.99 | <strong>Exclusive:</strong> $199</p>
+                    <a href="https://buy.stripe.com/aFaeVd0Gbdll2GW3Gp8og0d" target="_blank" class="btn btn-primary">MP3 Lease</a>
+                    <a href="https://buy.stripe.com/00w8wP88D5ST2GWel38og0e" target="_blank" class="btn btn-primary">WAV Lease</a>
+                    <a href="https://buy.stripe.com/28E9AT9cH2GHa9o3Gp8og0f" target="_blank" class="btn btn-secondary">Buy Exclusive</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Smoke Ritual</h3>
+                <p><strong>BPM:</strong> 107 | <strong>Genre:</strong> Trap/Dark</p>
+                <div class="custom-audio-player" data-beat-name="Smoke Ritual">
+                    <img src="audio/Beats_for_sale/Smoke Ritual - 107 BPM.png" alt="Smoke Ritual Album Art" class="album-art">
+                    <audio preload="metadata" data-beat-name="Smoke Ritual">
+                        <source src="audio/Beats_for_sale/Smoke Ritual - 107 BPM.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <button class="play-pause-btn">Play▶️</button>
+                    <span class="time-display">0:00 / 0:00</span>
+                </div>
+                <div class="beat-pricing">
+                    <p><strong>MP3 Lease:</strong> $24.99 | <strong>WAV Lease:</strong> $44.99 | <strong>Exclusive:</strong> $249</p>
+                    <a href="https://buy.stripe.com/7sYbJ1gF90yz2GW90J8og0g" target="_blank" class="btn btn-primary">MP3 Lease</a>
+                    <a href="https://buy.stripe.com/8x29AT3Snbdd4P4dgZ8og0h" target="_blank" class="btn btn-primary">WAV Lease</a>
+                    <a href="https://buy.stripe.com/fZuaEXex12GH3L0dgZ8og0i" target="_blank" class="btn btn-secondary">Buy Exclusive</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Shadow Circuit</h3>
+                <p><strong>BPM:</strong> 132 | <strong>Genre:</strong> Electronic/Hip-Hop</p>
+                <div class="custom-audio-player" data-beat-name="Shadow Circuit">
+                    <img src="audio/Beats_for_sale/Shadow Circuit - 132 BPM.png" alt="Shadow Circuit Album Art" class="album-art">
+                    <audio preload="metadata" data-beat-name="Shadow Circuit">
+                        <source src="audio/Beats_for_sale/Shadow Circuit - 132 BPM.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <button class="play-pause-btn">Play▶️</button>
+                    <span class="time-display">0:00 / 0:00</span>
+                </div>
+                <div class="beat-pricing">
+                    <p><strong>MP3 Lease:</strong> $24.99 | <strong>WAV Lease:</strong> $44.99 | <strong>Exclusive:</strong> $249</p>
+                    <a href="https://buy.stripe.com/5kQ6oH74z0yzbdsa4N8og0j" target="_blank" class="btn btn-primary">MP3 Lease</a>
+                    <a href="https://buy.stripe.com/3cI3cvbkP811bdsdgZ8og0k" target="_blank" class="btn btn-primary">WAV Lease</a>
+                    <a href="https://buy.stripe.com/00w9ATbkP8110yOb8R8og0l" target="_blank" class="btn btn-secondary">Buy Exclusive</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Ruthless Momentum</h3>
+                <p><strong>BPM:</strong> 155 | <strong>Genre:</strong> Hip-Hop/Trap</p>
+                <div class="custom-audio-player" data-beat-name="Ruthless Momentum">
+                    <img src="audio/Beats_for_sale/Ruthless Momentum - 155 BPM.png" alt="Ruthless Momentum Album Art" class="album-art">
+                    <audio preload="metadata" data-beat-name="Ruthless Momentum">
+                        <source src="audio/Beats_for_sale/Ruthless Momentum - 155 BPM.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <button class="play-pause-btn">Play▶️</button>
+                    <span class="time-display">0:00 / 0:00</span>
+                </div>
+                <div class="beat-pricing">
+                    <p><strong>MP3 Lease:</strong> $29.99 | <strong>WAV Lease:</strong> $49.99 | <strong>Exclusive:</strong> $299</p>
+                    <a href="https://buy.stripe.com/bJe4gz0Gb4OP6Xc1yh8og0O" target="_blank" class="btn btn-primary">MP3 Lease</a>
+                    <a href="https://buy.stripe.com/9B6bJ11Kfa99gxMdgZ8og0P" target="_blank" class="btn btn-primary">WAV Lease</a>
+                    <a href="https://buy.stripe.com/5kQfZhex13KLepEdgZ8og0Q" target="_blank" class="btn btn-secondary">Buy Exclusive</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Mirror Path</h3>
+                <p><strong>BPM:</strong> 94 | <strong>Genre:</strong> Chill/Hip-Hop</p>
+                <div class="custom-audio-player" data-beat-name="Mirror Path">
+                    <img src="audio/Beats_for_sale/Mirror Path - 94 BPM.png" alt="Mirror Path Album Art" class="album-art">
+                    <audio preload="metadata" data-beat-name="Mirror Path">
+                        <source src="audio/Beats_for_sale/Mirror Path - 94 BPM.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <button class="play-pause-btn">Play▶️</button>
+                    <span class="time-display">0:00 / 0:00</span>
+                </div>
+                <div class="beat-pricing">
+                    <p><strong>MP3 Lease:</strong> $19.99 | <strong>WAV Lease:</strong> $39.99 | <strong>Exclusive:</strong> $199</p>
+                    <a href="https://buy.stripe.com/7sYcN50Gbepp0yOgtb8og0m" target="_blank" class="btn btn-primary">MP3 Lease</a>
+                    <a href="https://buy.stripe.com/3cI4gzex14OP2GW0ud8og0n" target="_blank" class="btn btn-primary">WAV Lease</a>
+                    <a href="https://buy.stripe.com/28E28r74z5ST1CSb8R8og0o" target="_blank" class="btn btn-secondary">Buy Exclusive</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Buried Tempo</h3>
+                <p><strong>BPM:</strong> 69 | <strong>Genre:</strong> Lo-Fi/Dark</p>
+                <div class="custom-audio-player" data-beat-name="Buried Tempo">
+                    <img src="audio/Beats_for_sale/Buried Tempo - 69 BPM.png" alt="Buried Tempo Album Art" class="album-art">
+                    <audio preload="metadata" data-beat-name="Buried Tempo">
+                        <source src="audio/Beats_for_sale/Buried Tempo - 69 BPM.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <button class="play-pause-btn">Play▶️</button>
+                    <span class="time-display">0:00 / 0:00</span>
+                </div>
+                <div class="beat-pricing">
+                    <p><strong>MP3 Lease:</strong> $14.99 | <strong>WAV Lease:</strong> $34.99 | <strong>Exclusive:</strong> $149</p>
+                    <a href="https://buy.stripe.com/bJeaEXfB51CDa9ob8R8og0p" target="_blank" class="btn btn-primary">MP3 Lease</a>
+                    <a href="https://buy.stripe.com/7sY28r74z6WX81gel38og0q" target="_blank" class="btn btn-primary">WAV Lease</a>
+                    <a href="https://buy.stripe.com/14A8wPdsX9555T84Kt8og0r" target="_blank" class="btn btn-secondary">Buy Exclusive</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Blood Season</h3>
+                <p><strong>BPM:</strong> 85 | <strong>Genre:</strong> Trap/Dark</p>
+                <div class="custom-audio-player" data-beat-name="Blood Season">
+                    <img src="audio/Beats_for_sale/Blood Season - 85 BPM.png" alt="Blood Season Album Art" class="album-art">
+                    <audio preload="metadata" data-beat-name="Blood Season">
+                        <source src="audio/Beats_for_sale/Blood Season - 85 BPM.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <button class="play-pause-btn">Play▶️</button>
+                    <span class="time-display">0:00 / 0:00</span>
+                </div>
+                <div class="beat-pricing">
+                    <p><strong>MP3 Lease:</strong> $24.99 | <strong>WAV Lease:</strong> $44.99 | <strong>Exclusive:</strong> $249</p>
+                    <a href="https://buy.stripe.com/eVqbJ174zchhchwel38og0s" target="_blank" class="btn btn-primary">MP3 Lease</a>
+                    <a href="https://buy.stripe.com/00w7sL9cH4OPftI7WF8og0t" target="_blank" class="btn btn-primary">WAV Lease</a>
+                    <a href="https://buy.stripe.com/4gM7sL60v0yzftIccV8og0u" target="_blank" class="btn btn-secondary">Buy Exclusive</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sam's Goods, LLC</h3>
+                <p>Premium custom apparel and exclusive beats</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="store.html">Store</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: samosupreme@samsgoods.company</p>
+                <p>Phone: (916) 720-9392</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sam's Goods, LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        // Size dropdown and buy button functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all size dropdowns and buy buttons
+            const sizeDropdowns = document.querySelectorAll('.size-dropdown');
+            const buyButtons = document.querySelectorAll('.buy-button');
+
+            // Add event listeners to size dropdowns
+            sizeDropdowns.forEach(dropdown => {
+                dropdown.addEventListener('change', function() {
+                    const productId = this.getAttribute('data-product');
+                    const selectedSize = this.value;
+                    const buyButton = document.querySelector(`button[data-product="${productId}"]`);
+                    
+                    // Enable/disable buy button based on size selection
+                    if (selectedSize) {
+                        buyButton.disabled = false;
+                        buyButton.textContent = `Buy Now - Size ${selectedSize}`;
+                    } else {
+                        buyButton.disabled = true;
+                        buyButton.textContent = 'Buy Now';
+                    }
+                });
+            });
+
+            // Add event listeners to buy buttons
+            buyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = this.getAttribute('data-product');
+                    const stripeUrl = this.getAttribute('data-stripe-url');
+                    const sizeDropdown = document.querySelector(`select[data-product="${productId}"]`);
+                    const selectedSize = sizeDropdown.value;
+
+                    if (!selectedSize) {
+                        alert('Please select a size before purchasing.');
+                        return;
+                    }
+
+                    // Store size information in localStorage for potential future use
+                    localStorage.setItem('selectedSize', selectedSize);
+                    localStorage.setItem('productId', productId);
+
+                    // Redirect to Stripe checkout
+                    window.open(stripeUrl, '_blank');
+                });
+            });
+
+            // Navigation menu toggle functionality
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                });
+            }
+
+            // Smooth scrolling for store navigation
+            const storeNavLinks = document.querySelectorAll('.store-nav a');
+            storeNavLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
+

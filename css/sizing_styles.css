@@ -1,0 +1,311 @@
+/* Enhanced Sizing Dropdown Styles */
+/* Add this to your existing style.css or include as a separate file */
+
+/* Size Selector Container */
+.size-selector {
+    margin: 15px 0;
+    width: 100%;
+}
+
+.size-selector label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Size Dropdown Styling */
+.size-dropdown {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+.size-dropdown:focus {
+    outline: none;
+    border-color:rgb(210, 0, 0);
+    box-shadow: 0 0 0 3px rgba(209, 222, 236, 0.1);
+}
+
+.size-dropdown:hover {
+    border-color:rgb(224, 10, 10);
+    background-color: #f8f9fa;
+}
+
+.size-dropdown option {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Enhanced Buy Button */
+.buy-button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px 20px;
+    background: linear-gradient(135deg,rgb(146, 3, 3) 0%,rgb(183, 10, 13) 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.buy-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.buy-button:hover::before {
+    left: 100%;
+}
+
+.buy-button:hover {
+    background: linear-gradient(135deg,rgb(144, 7, 30) 0%,rgb(125, 7, 7) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(136, 141, 143, 0.3);
+}
+
+.buy-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(72, 176, 2, 0.2);
+}
+
+.buy-button:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.buy-button:disabled::before {
+    display: none;
+}
+
+.buy-button:disabled:hover {
+    background: #6c757d;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Product Card Enhancements */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.3;
+}
+
+.product-price {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 800;
+    color:rgb(216, 166, 13);
+    text-align: center;
+}
+
+/* Size Alert Modal */
+.size-alert-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.alert-content {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.alert-content h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 24px;
+}
+
+.alert-content p {
+    margin-bottom: 25px;
+    color: #666;
+    font-size: 16px;
+}
+
+.alert-close-btn {
+    background:rgb(133, 141, 149);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.alert-close-btn:hover {
+    background:rgb(110, 10, 25);
+}
+
+/* Loading State */
+.buy-button.loading {
+    position: relative;
+    color: transparent;
+}
+
+.buy-button.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .size-dropdown {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 14px 16px;
+    }
+    
+    .buy-button {
+        padding: 16px 20px;
+        font-size: 16px;
+    }
+    
+    .product-info {
+        padding: 15px;
+    }
+    
+    .alert-content {
+        margin: 20px;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .size-selector label {
+        font-size: 13px;
+    }
+    
+    .size-dropdown {
+        padding: 12px 14px;
+        font-size: 15px;
+    }
+    
+    .buy-button {
+        padding: 14px 18px;
+        font-size: 15px;
+    }
+}
+
+/* Focus styles for accessibility */
+.size-dropdown:focus-visible,
+.buy-button:focus-visible {
+    outline: 2px solidrgb(141, 6, 33);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .size-dropdown {
+        border-width: 3px;
+    }
+    
+    .buy-button {
+        border: 2px solid #000;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .size-dropdown,
+    .buy-button,
+    .product-card {
+        transition: none;
+    }
+    
+    .buy-button::before {
+        display: none;
+    }
+    
+    .size-alert-modal,
+    .alert-content {
+        animation: none;
+    }
+}
+

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Service - Sam's Goods, LLC</title>
+    <meta name="description" content="Book custom apparel, music production, video creation, or branding services with Sam's Goods. Professional creative services in Sacramento, CA.">
+    <link rel="icon" type="image/x-icon" href="images/SG ICON.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <img src="images/SG ICON.png" alt="Sam's Goods Logo" class="logo">
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="store.html" class="nav-link">Store</a></li>
+                <li><a href="booking.html" class="nav-link">Book Now</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-content">
+            <h1>Book a Service</h1>
+            <p>Ready to bring your creative vision to life? Let's get started.</p>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="section">
+        <div class="grid grid-2">
+            <!-- Booking Form -->
+            <div class="card">
+                <h2>Service Booking Form</h2>
+                <p>Fill out the form below and we'll get back to you within 24 hours with a custom quote and availability.</p>
+                
+                <form id="booking-form" action="https://formspree.io/f/xpwagvkr" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name *</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service" class="form-label">Service Interested In *</label>
+                        <select id="service" name="service" class="form-select" required>
+                            <option value="">Select a service...</option>
+                            <optgroup label="Custom Apparel & Merchandise">
+                                <option value="T-Shirt Printing">T-Shirt Printing</option>
+                                <option value="Custom Hoodies">Custom Hoodies</option>
+                                <option value="Vinyl Stickers">Vinyl Stickers</option>
+                                <option value="Merch Kits">Merch Kits</option>
+                            </optgroup>
+                            <optgroup label="Music Production">
+                                <option value="Exclusive Beat Production">Exclusive Beat Production</option>
+                                <option value="Beat Leasing">Beat Leasing</option>
+                                <option value="Mixing & Mastering">Mixing & Mastering</option>
+                                <option value="Full Song Production">Full Song Production</option>
+                                <option value="Hook Writing">Hook Writing / Feature Verse</option>
+                                <option value="Studio Time">Studio Time</option>
+                            </optgroup>
+                            <optgroup label="Video Production">
+                                <option value="Music Video Basic">Music Video (Basic)</option>
+                                <option value="Music Video Premium">Music Video (Premium)</option>
+                                <option value="Visualizer Video">Visualizer Video</option>
+                                <option value="Promo Video">Promo Video (Reels/Shorts)</option>
+                                <option value="YouTube Editing">YouTube/Podcast Editing</option>
+                                <option value="Behind-the-Scenes">Behind-the-Scenes Video</option>
+                            </optgroup>
+                            <optgroup label="Design & Branding">
+                                <option value="Logo Design">Logo Design</option>
+                                <option value="Album Cover">Mixtape/Album Cover</option>
+                                <option value="Business Starter Kit">Business Starter Kit</option>
+                                <option value="Flyer Design">Flyer/Poster Design</option>
+                                <option value="Branding Package">Complete Branding Package</option>
+                            </optgroup>
+                            <optgroup label="Bundle Deals">
+                                <option value="Artist Starter Pack">Artist Starter Pack</option>
+                                <option value="Content Creator Bundle">Content Creator Bundle</option>
+                                <option value="Music Video + Merch Bundle">Music Video + Merch Bundle</option>
+                            </optgroup>
+                            <option value="Custom Quote">Custom Quote / Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="preferred-date" class="form-label">Preferred Start Date</label>
+                        <input type="date" id="preferred-date" name="preferred-date" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget" class="form-label">Budget Range</label>
+                        <select id="budget" name="budget" class="form-select">
+                            <option value="">Select budget range...</option>
+                            <option value="Under $100">Under $100</option>
+                            <option value="$100 - $250">$100 - $250</option>
+                            <option value="$250 - $500">$250 - $500</option>
+                            <option value="$500 - $1000">$500 - $1000</option>
+                            <option value="$1000+">$1000+</option>
+                            <option value="Open to discussion">Open to discussion</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location" class="form-label">Location (if applicable)</label>
+                        <input type="text" id="location" name="location" class="form-input" placeholder="e.g., Sacramento, CA or Remote">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Project Details & Creative Direction *</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Tell us about your project, vision, style preferences, timeline, and any specific requirements..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="how-heard" class="form-label">How did you hear about us?</label>
+                        <select id="how-heard" name="how-heard" class="form-select">
+                            <option value="">Select...</option>
+                            <option value="Instagram">Instagram (@samsgoods)</option>
+                            <option value="Word of mouth">Word of mouth</option>
+                            <option value="Google search">Google search</option>
+                            <option value="Referral">Referral from friend/client</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit Booking Request</button>
+                </form>
+            </div>
+
+            <!-- Booking Information -->
+            <div class="card">
+                <h2>Booking Information</h2>
+                
+                <h3>📅 How It Works</h3>
+                <ol>
+                    <li><strong>Submit Request:</strong> Fill out the form with your project details</li>
+                    <li><strong>Quote & Timeline:</strong> We'll respond within 24 hours with pricing and availability</li>
+                    <li><strong>Deposit:</strong> 50% deposit required to secure your booking</li>
+                    <li><strong>Creation:</strong> We bring your vision to life</li>
+                    <li><strong>Delivery:</strong> Final payment and project delivery</li>
+                </ol>
+
+                <h3>💳 Payment & Policies</h3>
+                <ul>
+                    <li><strong>Deposit:</strong> 50% of service price (non-refundable if canceled within 48 hours)</li>
+                    <li><strong>Payment Methods:</strong> PayPal, or Stripe</li>
+                    <li><strong>Revisions:</strong> Up to 2 rounds included, additional at $25/hour</li>
+                    <li><strong>Timeline:</strong> Varies by service, discussed during consultation</li>
+                </ul>
+
+                <h3>📞 Direct Contact</h3>
+                <p>Prefer to talk directly? Reach out via:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:Samosupreme@samsgoods.company">Samosupreme@samsgoods.company</a></li>
+                    <li><strong>Instagram:</strong> <a href="https://instagram.com/samosupreme2025" target="_blank">@samosupreme2025</a></li>
+                </ul>
+
+                <h3>⏰ Availability Calendar</h3>
+                <div class="calendar-preview">
+                    <table class="booking-calendar">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10:00 AM</td>
+                                <td class="available">✓</td>
+                                <td class="booked">✗</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="booked">✗</td>
+                            </tr>
+                            <tr>
+                                <td>12:00 PM</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="booked">✗</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                            </tr>
+                            <tr>
+                                <td>2:00 PM</td>
+                                <td class="booked">✗</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="booked">✗</td>
+                                <td class="available">✓</td>
+                            </tr>
+                            <tr>
+                                <td>4:00 PM</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="booked">✗</td>
+                            </tr>
+                            <tr>
+                                <td>6:00 PM</td>
+                                <td class="available">✓</td>
+                                <td class="booked">✗</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="calendar-note"><small>✓ Available | ✗ Booked | Calendar updates in real-time</small></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Highlights -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Why Choose Sam's Goods?</h2>
+        </div>
+        <div class="grid grid-4">
+            <div class="card text-center">
+                <h3>🏆 Quality First</h3>
+                <p>Premium materials and professional-grade equipment for every project</p>
+            </div>
+            <div class="card text-center">
+                <h3>⚡ Fast Turnaround</h3>
+                <p>Most projects completed within 1-2 weeks, rush orders available</p>
+            </div>
+            <div class="card text-center">
+                <h3>💰 Fair Pricing</h3>
+                <p>Competitive rates with transparent pricing and no hidden fees</p>
+            </div>
+            <div class="card text-center">
+                <h3>🎨 Creative Vision</h3>
+                <p>Collaborative approach to bring your unique vision to life</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="services.html" class="footer-link">Services</a>
+                <a href="store.html" class="footer-link">Store</a>
+                <a href="booking.html" class="footer-link">Booking</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="terms.html" class="footer-link">Terms</a>
+            </div>
+            <div class="social-links">
+                <a href="https://instagram.com/samosupreme2025" class="social-link" target="_blank">📷 Instagram</a>
+                <a href="mailto:Samosupreme@samsgoods.company" class="social-link">✉️ Email</a>
+            </div>
+            <p>&copy; 2025 Sam's Goods, LLC. All rights reserved. | Sacramento, CA</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
