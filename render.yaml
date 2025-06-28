@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: sams-goods-website
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: STRIPE_SECRET_KEY
+        sync: false
