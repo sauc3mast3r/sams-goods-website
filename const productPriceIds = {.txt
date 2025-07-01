@@ -1,0 +1,19 @@
+const productPriceIds = {
+  "T-Shirt": {
+    small: "price_ABC123",
+    medium: "price_DEF456",
+    large: "price_GHI789"
+  },
+  "Sticker": {
+    oneSize: "price_JKL012"
+  },
+  "Hoodie": {
+    small: "price_HOODIE_SMALL",
+    medium: "price_HOODIE_MEDIUM",
+    large: "price_HOODIE_LARGE",
+    xl: "price_HOODIE_XL"
+  },
+  "Mug": {
+    oneSize: "price_MUG_001"
+  }
+};
